@@ -29,6 +29,11 @@ public class MainActivity extends Activity implements SensorEventListener {
 			maxSpeed = savedInstanceState.getFloat("maxSpeed");
 			minSpeed = savedInstanceState.getFloat("minSpeed");
 			lastTimestamp = savedInstanceState.getLong("lastTimestamp");
+		} else {
+			maxSpeed = 0f;
+			minSpeed = 0f;
+			speed = 0f;
+			lastTimestamp = -1;
 		}
 		
 		setContentView(R.layout.activity_main);
@@ -38,11 +43,7 @@ public class MainActivity extends Activity implements SensorEventListener {
 				.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 		
 		speedText = (TextView) findViewById(R.id.swingSpeed);
-		
-		maxSpeed = 0f;
-		minSpeed = 0f;
-		speed = 0f;
-		lastTimestamp = -1;
+		speedText.setText(Float.toString(maxSpeed));
 	}
 	
 	protected void onSaveInstanceState (Bundle outState) {
