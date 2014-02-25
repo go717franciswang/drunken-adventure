@@ -9,6 +9,8 @@
 * [ ] Animation
 
 ### Reference
+* Android ref, [sensor event]
 * [Motion recognition with Android devices], focused on using raw acceleration = \sqrt{x^2+y^2+z^2}-g
 
+[sensor event]: http://developer.android.com/reference/android/hardware/SensorEvent.html
 [Motion recognition with Android devices]: http://www.slideshare.net/paller/motion-recognition-with-android-devices
